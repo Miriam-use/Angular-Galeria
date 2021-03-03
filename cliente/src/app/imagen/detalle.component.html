@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <h5 class="modal-title">Galería</h5>
+    
+</div>
+<div class="modal-body">
+    <swiper [config]="config">
+        <div *ngFor="let imagen of imagenes" class="swiper-slide">
+          <div class="thumbnail text-center">
+            <img class="img-thumbnail img-rounded" src="{{imagen.imagenUrl}}" alt="">
+          </div>
+        </div>
+      </swiper>
+</div>
