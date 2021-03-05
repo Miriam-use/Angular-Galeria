@@ -83,7 +83,7 @@ export class ListaComponent implements OnInit {
     };
     html2canvas(DATA, options).then((canvas) => {
 
-      const img = canvas.toDataURL('image/PNG');
+      const img = canvas.toDataURL('../../result-pdf');
 
       // Add image Canvas to PDF
       const bufferX = 15;
@@ -97,5 +97,25 @@ export class ListaComponent implements OnInit {
       docResult.save(`${new Date().toISOString()}galeria.pdf`);
     });
   }
+
+  /**
+  * Show the search results based in the faqs
+  * @function showSearchResults
+  * @param {any} event
+  * @return {void}
+  */
+ public showSearchResults(event: any): void {
+    if (event.target.value.length >= 3) {
+      this.searching = true;
+    } else {
+      this.searching = false;
+    }
+  }
+
+  /**
+  * Shows or hide the search elements
+  * @var {boolean} searching
+  */
+ public searching: boolean = false;
 
 }
