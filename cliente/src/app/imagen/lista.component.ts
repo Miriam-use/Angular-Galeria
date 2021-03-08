@@ -33,6 +33,14 @@ export class ListaComponent implements OnInit {
   ngOnInit() {
     this.cargarImagenes();
   }
+
+  buscar(name : String):void{
+    this.imagenService.busca(name).subscribe(
+      data => {
+        this.imagenes = data;
+      }
+    );
+  }
 /**
  * 
  */

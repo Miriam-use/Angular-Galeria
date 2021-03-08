@@ -5,8 +5,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" type="search" placeholder="Buscar Imagen" aria-label="Search" >
-    <button class="btn btn-secondary my-2 my-sm-0" type="button">Buscar</button>
+    <input class="form-control mr-sm-2" type="search" placeholder="Buscar Imagen" aria-label="Search" value="flores">
+    <button class="btn btn-secondary my-2 my-sm-0" type="button" (click)="buscar()">Buscar</button>
   </form>
 </nav>
 
@@ -14,17 +14,17 @@
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
       <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-        <button type="button" class="btn btn-secondary disabled" value="animal">Animales</button>
+        <button type="button" class="btn btn-secondary disabled" value="animal" (click)="buscar('animales')">Animales</button>
       </div>
     </li>
     <li class="nav-item active">
       <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-        <button type="button" class="btn btn-secondary disabled" value="paisaje">Paisajes</button>
+        <button type="button" class="btn btn-secondary disabled" value="paisaje" (click)="buscar('paisajes')">Paisajes</button>
       </div>
     </li>
     <li class="nav-item active">
       <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-        <button type="button" class="btn btn-secondary disabled" value="flore">Flores</button>
+        <button type="button" class="btn btn-secondary disabled" value="flore" (click)="buscar('flores')">Flores</button>
       </div>
     </li>
   </ul>

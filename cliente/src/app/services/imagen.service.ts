@@ -36,4 +36,8 @@ export class ImagenService {
   public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.imagenURL + `delete/${id}`);
   }
+
+  public busca(name : String): Observable<Imagen[]>{
+    return this.httpClient.get<any>(this.imagenURL + `list/${name}`);
+  }
 }
